@@ -1,0 +1,50 @@
+:root {
+  --page-background-color: #e5e5e5;
+  --dividing-line-color: #f0eeeb; 
+  --lightyellow: #fac62d;
+  --yellow: #f0b505;
+  --darkyellow: #e1ab08;
+  --white: #ffffff;
+  --red: #eb4b51;
+  --pink: #faf0f0;
+  --blue: #2794db;
+  --silvergray: #989691;
+  --lightgray: #b2b0ab;
+  --gray: #f5f4f2;
+  --darkgray: #e7e4de;
+  --black: #383736;
+  --lightgreen: #f2faf0;
+  --green: #64b851;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: @desktop-width;
+  min-width: @mobile-width;
+  background-color: var(--page-background-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.wrapper {  
+  min-height: 100vh;  
+  min-width: 304px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 712px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  @media (min-width: @tablet-large-width) {
+    min-width: 864px;
+  }
+}
