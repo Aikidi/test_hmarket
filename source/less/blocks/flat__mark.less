@@ -1,0 +1,72 @@
+.flat__mark {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 22px;
+  padding: 8px;
+  padding-right: 16px;
+  padding-left: 36px;
+  margin-right: 12px;
+  width: max-content;
+  height: 32px;
+  box-sizing: border-box;
+  position: relative;
+
+  &--positive {
+    background-color: var(--lightgreen);
+    color: var(--green);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 11px;
+      width: 9px;
+      height: 4px;
+      transform: rotate(-45deg);
+      border-left: 2px solid var(--green);
+      border-bottom: 2px solid var(--green);
+    }
+
+  }
+
+  &--negative {
+    background-color: var(--pink);
+    color: var(--red);
+      &::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 14px;
+      width: 14px;
+      height: 2px;
+      transform: rotate(45deg);
+      background-color: var(--red);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 14px;
+      width: 14px;
+      height: 2px;
+      transform: rotate(-45deg);
+      background-color: var(--red);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: 16px;
+  }
+
+  @media (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

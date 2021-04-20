@@ -1,0 +1,68 @@
+.flat__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;  
+  max-width: 285px;
+
+  display: grid;
+  grid-template-areas:
+    "floor ceiling-height"
+    "total-area facing"
+    "living-area kitchen-area";
+    grid-template-columns: 1fr 1fr; 
+
+   @media (min-width: 1280px) {
+    grid-template-areas:    
+    "floor ceiling-height facing"
+    "total-area living-area kitchen-area";
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 430px;
+   }
+}
+
+.flat__features-item {
+  margin-bottom: 12px;
+
+  &--floor {
+    grid-area: floor;
+  }
+
+  &--ceiling-height {
+    grid-area: ceiling-height;
+  }
+
+  &--facing {
+    grid-area: facing;
+  }
+
+  &--total-area {
+    grid-area: total-area;
+  }
+
+  &--living-area {
+    grid-area: living-area;
+  }
+
+  &--kitchen-area {
+    grid-area: kitchen-area;
+  }
+}
+
+.flat__features-name {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--silvergray);
+}
+
+.flat__features-value {
+  margin: 0;
+  
+  font-weight: 500;
+}
+
+.flat__features-value sup {
+  line-height: 0;
+  font-size: 7px;
+}
